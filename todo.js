@@ -4,8 +4,8 @@ todoApp.controller('TodoController', function ($scope, $http) {
 
 
     $scope.todos = [
-    { text: 'Learn AngularJS', done: false },
-    { text: 'Build an app', done: false }
+    { text: 'learn angularJS', done: false },
+    { text: 'learn 30 technologies in 30 days', done: false }
   ];
 
     $scope.getTotalTodos = function () {

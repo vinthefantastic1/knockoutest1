@@ -4,16 +4,22 @@
     <head>
         <meta charset="utf-8" />
         <title></title>
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
+    <style>
+        .strike {text-decoration: line-through}
+    </style>
 
     <div class="container" ng-app="todoApp" ng-controller="TodoController">
+
     <h1>{{getTotalTodos()}} items on todo list</h1>
     <p id="empty" ng-hide="todos.length || !loaded">You don't have any todos! Add one now:</p>
     <ul id="todos" >
       <li ng-repeat="todo in todos">
         <label class="checkbox">
-          <input type="checkbox" ng-model="todo.done" ng-change="changeCompleted(todo)" />
-          {{todo.text}}
+          <input type="checkbox" ng-model="todo.done" ng-change="changeCompleted(todo)"  />
+          <span ng-class="{strike: todo.done }">{{todo.text}}</span>
         </label>
       </li>
     </ul>
