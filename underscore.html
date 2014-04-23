@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>underscorejs </title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    </head>
+    <body>
+        <p><h1><a href="http://underscorejs.org">http://underscorejs.org</a></h1></p>
+        <p></p>
+    <h2><div id="evens"    >Open your console to see the results</div></h2>
+        <div>_.filter([1, 2, 3, 4, 5, 6], function (num) { return num % 2 == 0; });</div>
+        <div>_.map([1, 2, 3], function (num) { return num * 3; })</div>
+
+
+
+    </body>
+
+<script>
+
+    var evens = _.filter([1, 2, 3, 4, 5, 6], function (num) { return num % 2 == 0; });
+    console.log(evens);
+    //  $("#evens").html(evens);
+
+    console.log(_.map([1, 2, 3], function (num) { return num * 3; }));
+
+    _.each({one: 1, two: 2, three: 3}, alert);
+
+</script>        
+
+
+</html>

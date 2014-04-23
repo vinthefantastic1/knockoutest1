@@ -18,13 +18,15 @@ todoApp.controller('TodoController', function ($scope, $http) {
         $scope.formTodoText = '';
     };
 
-    $scope.clearCompleted = function () {
+    // using underscore.js library
+    $scope.clear2 = function () {
         $scope.todos = _.filter($scope.todos, function (todo) {
             return !todo.done;
         });
     };
 
-    $scope.clear2 = function () {
+    // without using underscore.js
+    $scope.clear = function () {
 
         var oldTodos = $scope.todos;
         $scope.todos = [];
