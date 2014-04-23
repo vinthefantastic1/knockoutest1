@@ -1,10 +1,11 @@
 
 plunetApp.factory('plunetFactory', function ($http) {
     return {
-    getPlunetAsync: function(callback) {
-         $http.get('http://sandiego:8005/api/jobs?status=9').success(callback).error(function(data,status,headers,config){alert("error returning data"); console.log(data); return status;});
-    }
-  };
+        getPlunetAsync: function (callback) {
+            var uri = "http://sandiego:8005/api/jobs?status=9";
+            $http.get(uri).success(callback).error(function (data, status, headers, config) { alert("error returning data"); console.log(data); return status; });
+        }
+    };
 });
 
 plunetApp.controller("PlunetController", function ($scope, plunetFactory) {
