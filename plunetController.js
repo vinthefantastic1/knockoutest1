@@ -2,8 +2,7 @@
 plunetApp.factory('plunetFactory', function ($http) {
     return {
     getPlunetAsync: function(callback) {
-    //  $http.get('http://localhost:50010/api/jobs?status=9').success(callback);
-         $http.get('http://sandiego:8005/api/jobs?status=9').success(callback);
+         $http.get('http://sandiego:8005/api/jobs?status=9').success(callback).error(function(data,status,headers,config){alert("error returning data"); console.log(data); return status;});
     }
   };
 });

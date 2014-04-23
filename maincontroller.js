@@ -1,12 +1,14 @@
 
-app.controller("MainController", function($scope){
+app.controller("MainController", function ($scope) {
     $scope.understand = "I now understand how the scope works!"
     $scope.inputValue = "";
 
+    $scope.a = 100;
+    $scope.b = 5;
 
     $scope.selectedPerson = 0;
-	$scope.selectedGenre = null;
-	$scope.people = [
+    $scope.selectedGenre = null;
+    $scope.people = [
         {
             id: 0,
             name: 'Leon',
@@ -53,7 +55,7 @@ app.controller("MainController", function($scope){
     ];
 
     $scope.newPerson = null;
-    $scope.addNew = function() {
+    $scope.addNew = function () {
         if ($scope.newPerson != null && $scope.newPerson != "") {
             $scope.people.push({
                 id: $scope.people.length,
@@ -63,5 +65,5 @@ app.controller("MainController", function($scope){
             });
         }
     }
-		
+
 });
